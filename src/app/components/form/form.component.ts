@@ -37,12 +37,7 @@ export class FormComponent implements OnInit {
 
     if ( this.form.valid )  {
 
-      const newUrl: IUrl = {
-        nombre: this.form.controls['nombre'].value,
-        url: this.form.controls['url'].value
-      }
-
-      this._service.addUrl(newUrl);
+      this._service.addUrl(this.form.value);
 
   };
 
